@@ -1,0 +1,23 @@
+#personnages {
+  padding: 50px 0;
+  background: url(../img/news.jpg) center/cover;
+
+  .pers-content {
+    @include sectionContent;
+    text-shadow: 1px 1px 1px $black1;
+  }
+
+  .articles {
+    @include articles;
+
+    .article {
+      background: rgba(0, 0, 0, 0.5);
+
+      img {
+        height: 200px;
+        filter: drop-shadow(3px 2px 3px $white1);
+        padding-bottom: 10px;
+      }
+    }
+  }
+}

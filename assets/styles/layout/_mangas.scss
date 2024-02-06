@@ -1,0 +1,17 @@
+#mangas {
+  padding: 50px 0;
+
+  .mangas-content {
+    @include sectionContent;
+  }
+
+  .articles {
+    @include articles;
+
+    img {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto;
+    }
+  }
+}

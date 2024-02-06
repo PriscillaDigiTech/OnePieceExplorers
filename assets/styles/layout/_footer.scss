@@ -1,0 +1,17 @@
+footer {
+  padding: 50px 0;
+
+  .footer-content {
+    width: 85%;
+    margin: 0 auto;
+
+    p {
+      padding-bottom: 10px;
+
+      a {
+        color: $white1;
+        font-weight: bold;
+      }
+    }
+  }
+}

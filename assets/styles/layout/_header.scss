@@ -1,0 +1,99 @@
+header {
+  width: 100vw;
+  background: radial-gradient($grey1, $black1);
+  position: relative;
+  h1 {
+    a {
+      width: 85%;
+      display: block;
+      margin: 0 auto;
+      padding: 20px 0;
+      color: $white1;
+      text-shadow: 0 0 5px $black1;
+
+      &:hover {
+        text-shadow: 0 0 5px $white1;
+      }
+    }
+  }
+
+  .menu-icons {
+    display: none;
+
+    @media screen and (max-width: 950px) {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: $white1;
+      text-shadow: 1px 1px 5px $red1;
+      font-size: 1.2rem;
+    }
+
+    #open-icon {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+
+    #close-icon {
+      display: none;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+  }
+  nav {
+    width: 85%;
+    margin: 0 auto;
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+      li {
+        list-style: none;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+        transition: 0.2s;
+
+        a {
+          color: $white1;
+          text-transform: uppercase;
+          font-weight: 500;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    @media screen and (max-width: 950px) {
+      display: none;
+      display: block;
+
+      ul {
+        display: block;
+
+        li {
+          display: block;
+          border-bottom: 1px solid rgba(241, 241, 241, 0.3);
+
+          &:hover {
+            background: $white1;
+
+            a {
+              color: $black1;
+            }
+          }
+
+          &:hover {
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+}

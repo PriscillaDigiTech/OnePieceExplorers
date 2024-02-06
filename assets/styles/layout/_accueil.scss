@@ -1,0 +1,26 @@
+#accueil {
+  height: 100vh;
+  background: url(../img/1.webp) center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    width: 85%;
+
+    h2 {
+      font-size: 4rem;
+      text-shadow: 1px 1px 1px $black1;
+      padding-bottom: 30px;
+
+      @media screen and (max-width: 950px) {
+        font-size: 2.5rem;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 1px $black1;
+    }
+  }
+}

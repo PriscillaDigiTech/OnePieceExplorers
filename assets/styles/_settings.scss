@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "one-piece";
+  src: url(../fonts/one-piece-font.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+$font1: one-piece;
+$font2: Montserrat;
+
+$black1: #000;
+$grey1: #333;
+$white1: #fff;
+$red1: darkred;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  font-family: $font2;
+  font-size: 0.9rem;
+  font-weight: 300;
+  background: $black1;
+  color: $white1;
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-family: $font1;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 4rem;
+  letter-spacing: 1px;
+
+  @media screen and (max-width: 560px) {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+
+  @media screen and (max-width: 560px) {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.red {
+  color: $red1;
+}
+
+@mixin sectionContent {
+  width: 85%;
+  margin: 0 auto;
+
+  h2 {
+    padding-bottom: 30px;
+  }
+
+  p {
+    padding-bottom: 30px;
+  }
+}
+
+@mixin button1 {
+  background: transparent;
+  border: 1px solid $white1;
+  padding: 10px 20px;
+  color: $white1;
+  font-family: $font2;
+  font-size: 0.9rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background: $white1;
+    color: $black1;
+    transform: scale(1.2);
+  }
+}
+
+@mixin articles {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @media screen and (max-width: 950px) {
+    display: block;
+  }
+
+  a {
+    color: $white1;
+  }
+
+  .article {
+    padding: 20px;
+    border: 1px solid $white1;
+    margin: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+
+    h3 {
+      padding-bottom: 10px;
+      border-bottom: 1px solid $white1;
+    }
+
+    h4 {
+      padding: 20px 0;
+    }
+
+    p {
+      padding: 10px 0 20px;
+    }
+
+    button {
+      @include button1;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 10px $white1;
+      transform: scale(1.02);
+    }
+  }
+}

@@ -1,0 +1,35 @@
+#news {
+  background: url("../img/news.jpg") center/cover;
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 50px 0;
+
+    .news-content {
+      @include sectionContent;
+
+      h2 {
+        padding: 20px 0;
+      }
+
+      form {
+        input[type="text"] {
+          margin: 10px;
+        }
+
+        #checkbox {
+          display: block;
+          padding: 10px 0 20px;
+
+          a {
+            color: $white1;
+            font-weight: bold;
+          }
+        }
+        button {
+          @include button1;
+        }
+      }
+    }
+  }
+}
